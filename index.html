@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <h1 class="text-center text-5xl m-10">JavaScript Practice</h1>
+    <div class="grid grid-cols-4 gap-4 max-w-full text-center " >
+        <div class=" bg-red-300 p-10 rounded-lg" >01</div>
+        <div class=" bg-black text-white p-10" >02</div>
+        <div class=" bg-orange-800 text-white p-10" >03</div>
+        <div class=" bg-amber-100 p-10" >04</div>
+        <div class=" bg-red-300 p-10 rounded-lg" >01</div>
+        <div class=" bg-orange-800 text-white p-10 col-span-2" >03</div>
+        <div class=" bg-amber-100 p-10" >04</div>
+        
+        
+
+    </div>
+    <div>
+    <button type="button" onclick="myclick()" class="text-white bg-gray-800 m-10 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Dark</button>
+    <p id="demo">Designer</p>
+    </div>
+    <script>
+       function myclick(){
+         document.getElementById("demo").innerHTML="Hello Programmar"
+       }
+    </script>
+    
+</body>
+</html>
