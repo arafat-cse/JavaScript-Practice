@@ -102,7 +102,8 @@ const result = aValue %2==0 ? "Even" : "odd";
 
 console.log("result: ", result);
 
-// destructuring 
+// destructuring     
+console.log("destructuring");
 const user = {
     firstName: "John",
     lastName: "Doe",
@@ -111,3 +112,38 @@ const user = {
 };
 const { firstName, lastName, age, eyeColor } = user;
 console.log("firstName: ", firstName);
+
+// optional chaining 
+console.log("optional chaining");
+const user1 = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    eyeColor: "blue",
+    Education: {
+        degree: "Computer Science",
+        Schoole: {
+            name: "ABC University",
+            year: 2020,
+        },
+    },
+};
+
+const schoolName = user1?.Education?.Schoole?.name || "N/A";
+console.log("schoolName: ", schoolName);
+
+// nullish coalescing 
+console.log("nullish coalescing");
+let lang = false;
+console.log("lang: ", lang ?? "JvaScript");
+console.log("lang: ", lang || "JvaScript");
+console.log("lang: ", lang && "JvaScript");
+
+// asynchronous
+console.log("asynchronous");
+async function fetchData() {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+    const data = await response.json();
+    console.log("data: ", data);
+}
+fetchData();
